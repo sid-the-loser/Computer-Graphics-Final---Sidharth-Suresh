@@ -3,7 +3,7 @@ Shader "Custom/HologramShader"
     Properties
     {
         _RimColor ("Rim Color", Color) = (0, 0.5, 0.5, 0.0)
-        _RimPower ("Rim Power", Range(0.5, 0.8)) = 0.3
+        _RimPower ("Rim Power", Range(0, 0.9)) = 0.3
     }
     SubShader
     {
@@ -16,9 +16,8 @@ Shader "Custom/HologramShader"
             ZWrite On
             ColorMask 0
         }
-        
-        CGPROGRAM
 
+        CGPROGRAM
         #pragma surface surf Lambert alpha:fade
 
         struct Input
@@ -35,7 +34,6 @@ Shader "Custom/HologramShader"
             o.Emission = _RimColor.rgb * pow(rim, _RimPower) * 10;
             o.Alpha = pow(rim, _RimPower);
         }
-        
         ENDCG
     }
     FallBack "Diffuse"

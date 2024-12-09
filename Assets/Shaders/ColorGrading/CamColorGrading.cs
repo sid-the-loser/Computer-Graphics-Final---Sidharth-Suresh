@@ -1,13 +1,14 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class CamColorGrading : MonoBehaviour
+namespace Shaders.ColorGrading
 {
-    [SerializeField] private Material colorGradingMaterial;
-
-    private void OnRenderImage(RenderTexture source, RenderTexture destination)
+    public class CamColorGrading : MonoBehaviour
     {
-        Graphics.Blit(source, destination, colorGradingMaterial);
+        [SerializeField] private Material colorGradingMaterial;
+
+        private void OnRenderImage(RenderTexture source, RenderTexture destination)
+        {
+            Graphics.Blit(source, destination, colorGradingMaterial);
+        }
     }
 }

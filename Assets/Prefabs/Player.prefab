@@ -50,7 +50,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 81e68d1e636392f4b849e08c5624c8a4, type: 3}
       propertyPath: m_Name
-      value: bunny
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 1661355891338443729, guid: 81e68d1e636392f4b849e08c5624c8a4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -64,6 +64,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7435508162849880524, guid: 81e68d1e636392f4b849e08c5624c8a4, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0fb04d691202c2a4ea220825da371a58, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
