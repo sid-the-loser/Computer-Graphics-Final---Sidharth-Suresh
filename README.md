@@ -38,6 +38,7 @@ I used the **Terrain** gameobject for adding terrain to the scene. The water in 
 #### Materials and Shaders
 
 - I used the **Ouline shader** on the player and the pipes to make them standout and hint at the players that they can be interacted with.
+ 
  The outline shader makes use of, lambert shader, fragment shader and vertex shader. The lambert shader managed the albedo color of the mesh. Then, in a pass, the culling is changed to `FRONT`. The vertex shader manages to make the outline by extruding out the mesh's verteces then the fragment shader puts the color of the outline on the extruded faces.
 
 - I used the 
