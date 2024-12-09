@@ -37,7 +37,7 @@ Shader "Custom/WaveShader"
         {
                 UNITY_INITIALIZE_OUTPUT(Input, o);
             float t = _Time.y * _Speed;
-            float waveHeight = sin(t + v.vertex.x * _Freq) * _Amp + sin(t * 2 + v.vertex.x * _Freq * 2) * _Amp;
+            float waveHeight = sin(t + v.vertex.x * _Freq) * _Amp + sin(t * 2 + v.vertex.z * _Freq * 2) * _Amp;
 
             v.vertex.y = v.vertex.y + waveHeight;
             v.normal = normalize(float3(v.normal.x + waveHeight, v.normal.y, v.normal.z));
