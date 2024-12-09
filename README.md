@@ -47,6 +47,8 @@ The wave shader made use of vertex shader and fragment shader. In this case, the
 
 - I used the **Hologram shader** for the points in the paths
 
+This shader made use of the normal Lambert lighting. `half rim = 1.0 - saturate(dot(normalize(IN.viewDir), o.Normal));` determined the rim effect and the alpha of the mesh was taken from `o.Alpha = pow(rim, _RimPower);` where `_RimPower` was in properties
+
 - I used the **Color Grading shader** for the camera
 
 >The LUT used for the color grading was taken from Canvas
